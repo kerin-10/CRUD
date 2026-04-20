@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Sistem Manajemen Kos
 
 Aplikasi web berbasis **Laravel** untuk mengelola data kos, meliputi data kamar, data penghuni, dan tampilan dashboard ringkasan.
@@ -47,7 +47,7 @@ PHP (Laravel Framework)
 MySQL / SQLite
 HTML, CSS, JavaScript
 Vite (Frontend Build Tool)
-=======
+
 
 #  Sistem Manajemen Kos (CRUD)
 
@@ -273,5 +273,4 @@ Mata Kuliah: WEB 2
 * Pastikan semua dependency sudah terinstall sebelum menjalankan project
 * README ini dibuat sebagai dokumentasi project sesuai arahan dosen
 
----
->>>>>>> 38c5d1272791fd2d90c28c0dd8b8d52571f0ebdb
+
