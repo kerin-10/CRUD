@@ -272,5 +272,3 @@ Mata Kuliah: WEB 2
 * Disarankan menggunakan SQLite agar tidak perlu konfigurasi database tambahan
 * Pastikan semua dependency sudah terinstall sebelum menjalankan project
 * README ini dibuat sebagai dokumentasi project sesuai arahan dosen
-
-
