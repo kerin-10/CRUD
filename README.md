@@ -273,5 +273,4 @@ Mata Kuliah: WEB 2
 * Pastikan semua dependency sudah terinstall sebelum menjalankan project
 * README ini dibuat sebagai dokumentasi project sesuai arahan dosen
 
----
->>>>>>> 38c5d1272791fd2d90c28c0dd8b8d52571f0ebdb
+
