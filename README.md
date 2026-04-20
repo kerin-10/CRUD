@@ -47,7 +47,7 @@ PHP (Laravel Framework)
 MySQL / SQLite
 HTML, CSS, JavaScript
 Vite (Frontend Build Tool)
-=======
+
 
 #  Sistem Manajemen Kos (CRUD)
 
