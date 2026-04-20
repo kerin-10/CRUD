@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Sistem Manajemen Kos
 
 Aplikasi web berbasis **Laravel** untuk mengelola data kos, meliputi data kamar, data penghuni, dan tampilan dashboard ringkasan.
