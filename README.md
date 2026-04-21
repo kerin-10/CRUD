@@ -68,161 +68,85 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 =======
 
-# Sistem Manajemen Kos
+# 📌 Sistem Manajemen Data Penghuni Kos
 
-Aplikasi web berbasis **Laravel** untuk mengelola data kos, meliputi data kamar, data penghuni, dan tampilan dashboard ringkasan.
+Aplikasi web berbasis Laravel untuk mengelola data penghuni kos secara sederhana.
 
-## Deskripsi Project
+---
 
-Project ini dibuat untuk membantu pengelolaan data kos secara sederhana.  
-Fitur utama yang tersedia pada aplikasi ini antara lain:
+## 📖 Deskripsi
 
-- Melihat dashboard data kos
-- Mengelola data kamar
-- Menambah, mengubah, dan menghapus data penghuni
-- Menambah dan mengubah data kamar
-- Menampilkan status kamar kosong atau terisi
+Project ini merupakan aplikasi CRUD (Create, Read, Update, Delete) yang digunakan untuk mengelola data penghuni kos.
 
-## Fitur Utama
+Data yang dikelola meliputi:
+- Nama lengkap
+- NIK
+- Umur
+- Nomor kamar
+- Nomor HP
+- Email
 
-### 1. Dashboard
-Menampilkan ringkasan data, seperti:
-- Total penghuni
-- Total kamar
-- Jumlah kamar kosong
-- Jumlah kamar terisi
-- Kategori kamar
-- Status pembayaran sewa
+Aplikasi ini dibuat dengan tampilan sederhana agar mudah digunakan oleh pemula.
 
-### 2. Manajemen Kamar
-Pengguna dapat:
-- Melihat daftar kamar
-- Menambahkan data kamar
-- Mengedit data kamar
+---
 
-### 3. Manajemen Penghuni
-Pengguna dapat:
-- Melihat daftar penghuni
+## ✨ Fitur Utama
+
+- Menampilkan data penghuni
 - Menambahkan data penghuni
 - Mengedit data penghuni
 - Menghapus data penghuni
-
-## Catatan
-Project ini **tidak menggunakan fitur login/authentication** pada alur utama aplikasi.  
-Walaupun pada Laravel terdapat file model `User` dan migration `users` bawaan, pada project ini fitur login belum diimplementasikan pada route maupun halaman aplikasi.
-
-## Teknologi yang Digunakan
-PHP (Laravel Framework)
-MySQL / SQLite
-HTML, CSS, JavaScript
-Vite (Frontend Build Tool)
-
-
-#  Sistem Manajemen Kos (CRUD)
-
-Aplikasi web berbasis **Laravel** yang digunakan untuk mengelola data kos, seperti data kamar, data penghuni, serta menampilkan dashboard ringkasan.
+- Menyimpan informasi nomor kamar (tanpa manajemen kamar terpisah)
 
 ---
 
-##  Deskripsi Project
+## 🛠️ Teknologi yang Digunakan
 
-Project ini dibuat untuk membantu pengelolaan kos secara sederhana dan terstruktur.
-Pengguna dapat melakukan pengolahan data (CRUD) terhadap kamar dan penghuni, serta melihat informasi melalui dashboard.
-
----
-
-##  Fitur Utama
-
-###  Dashboard
-
-Menampilkan ringkasan data:
-
-* Total penghuni
-* Total kamar
-* Jumlah kamar kosong
-* Jumlah kamar terisi
-* Kategori kamar
-* Status pembayaran sewa
-
-###  Manajemen Kamar
-
-* Melihat daftar kamar
-* Menambahkan data kamar
-* Mengedit data kamar
-
-###  Manajemen Penghuni
-
-* Melihat daftar penghuni
-* Menambahkan data penghuni
-* Mengedit data penghuni
-* Menghapus data penghuni
+- PHP
+- Laravel
+- MySQL / SQLite
+- Bootstrap
+- Blade Template
+- Node.js & NPM (opsional)
+- Vite (opsional)
 
 ---
 
-##  Catatan Penting
+## 📂 Struktur Project
 
-Project ini **tidak menggunakan fitur login/authentication**.
-Walaupun terdapat file bawaan Laravel seperti `User` dan tabel `users`, fitur tersebut belum digunakan dalam aplikasi.
-
----
-
-##  Teknologi yang Digunakan
-
-* PHP (Laravel Framework)
-* SQLite (Database)
-* HTML, CSS, JavaScript
-* Vite (Frontend Build Tool)
-* Composer
-* Node.js & NPM
+- `app/Models` → Model data penghuni
+- `app/Http/Controllers` → Logika CRUD penghuni
+- `resources/views` → Tampilan halaman
+- `routes/web.php` → Routing aplikasi
+- `database/migrations` → Struktur tabel penghuni
+- `database/seeders` → Data awal (opsional)
+- `.env` → Konfigurasi database
 
 ---
 
-##  Persyaratan Sistem
+## 🚀 Prosedur Instalasi
 
-Sebelum menjalankan project, pastikan sudah terinstall:
-
-* PHP >= 8.x
-* Composer
-* Node.js & NPM
-* Git
-
----
-
-##  Prosedur Instalasi
-
-Ikuti langkah-langkah berikut untuk menjalankan project di komputer lokal:
+Ikuti langkah-langkah berikut untuk menjalankan project ini di komputer lokal:
 
 ### 1. Clone Repository
-
-Download project dari GitHub:
 
 ```bash
 git clone https://github.com/username/nama-repo.git
 cd nama-repo
 ```
 
----
-
 ### 2. Install Dependency
-
-Install semua kebutuhan backend dan frontend:
 
 ```bash
 composer install
 npm install
 ```
 
----
-
 ### 3. Copy File Environment
-
-Membuat file konfigurasi:
 
 ```bash
 cp .env.example .env
 ```
-
----
 
 ### 4. Generate Application Key
 
@@ -230,78 +154,60 @@ cp .env.example .env
 php artisan key:generate
 ```
 
----
+### 5. Konfigurasi Database
 
-### 5. Konfigurasi Database (SQLite)
-
-Project ini menggunakan **SQLite** agar lebih mudah digunakan.
-
-Pastikan file database tersedia:
+#### Menggunakan SQLite (Disarankan)
 
 ```bash
 database/database.sqlite
 ```
-
-Jika belum ada, buat manual:
-
-```bash
-touch database/database.sqlite
-```
-
-Lalu atur file `.env`:
 
 ```env
 DB_CONNECTION=sqlite
 DB_DATABASE=database/database.sqlite
 ```
 
----
+#### Atau menggunakan MySQL
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=nama_database
+DB_USERNAME=root
+DB_PASSWORD=
+```
 
 ### 6. Jalankan Migration
-
-Membuat struktur tabel database:
 
 ```bash
 php artisan migrate
 ```
 
-Jika ingin menambahkan data awal:
-
-```bash
-php artisan db:seed
-```
-
----
-
-### 7. Jalankan Server Laravel
-
-Menjalankan aplikasi:
+### 7. Jalankan Server
 
 ```bash
 php artisan serve
 ```
 
-Buka browser dan akses:
+Akses di browser:
 
-```
+```text
 http://127.0.0.1:8000
 ```
 
 ---
 
-### 8. Jalankan Frontend (Opsional)
+## Cara Penggunaan
 
-Jika menggunakan Vite:
-
-```bash
-npm run dev
-```
+1. Jalankan aplikasi di browser
+2. Masuk ke halaman data penghuni
+3. Tambahkan data penghuni baru
+4. Edit atau hapus data sesuai kebutuhan
 
 ---
 
-##  Testing
-
-Menjalankan pengujian:
+## Testing
 
 ```bash
 php artisan test
@@ -309,39 +215,26 @@ php artisan test
 
 ---
 
-##  Struktur Halaman
+## Catatan
 
-* `/` → Halaman awal
-* `/Dashboard` → Dashboard
-* `/penghuni` → Data penghuni
-* `/kamar` → Data kamar
+- Project ini hanya mengelola **data penghuni**
+- Tidak terdapat fitur manajemen kamar terpisah
+- Gunakan PHP versi 8 atau lebih
+- Pastikan Composer dan database sudah terinstall
 
 ---
 
-##  Tujuan Project
+## Tujuan Project
 
 Project ini dibuat untuk:
 
-* Mempelajari konsep **MVC pada Laravel**
-* Mengimplementasikan operasi **CRUD**
-* Mengelola database menggunakan migration
-* Memahami routing dan struktur project Laravel
+- Mempelajari CRUD di Laravel
+- Memahami penggunaan database
+- Membuat aplikasi web sederhana
 
----
+## Author
+Nama: Kerin Sapitri Sembiring  
+Mata Kuliah: Web 2
 
-##  Author
-
-Nama: Kerin Sapitri Sembiring
-Mata Kuliah: WEB 2
-
----
-
-##  Catatan Tambahan
-
-* Disarankan menggunakan SQLite agar tidak perlu konfigurasi database tambahan
-* Pastikan semua dependency sudah terinstall sebelum menjalankan project
-* README ini dibuat sebagai dokumentasi project sesuai arahan dosen
->>>>>>> 649101c692197db716e06bcb0df89a8e5058f724
-=======
-# CRUD
->>>>>>> 4886e51606bfc1689f5be75a3723b51a8edda7ee
+Nama: (Isi Nama Kamu)  
+Mata Kuliah: Web 2
