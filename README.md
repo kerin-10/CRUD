@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
@@ -341,3 +342,6 @@ Mata Kuliah: WEB 2
 * Pastikan semua dependency sudah terinstall sebelum menjalankan project
 * README ini dibuat sebagai dokumentasi project sesuai arahan dosen
 >>>>>>> 649101c692197db716e06bcb0df89a8e5058f724
+=======
+# CRUD
+>>>>>>> 4886e51606bfc1689f5be75a3723b51a8edda7ee
